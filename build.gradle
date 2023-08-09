@@ -22,17 +22,19 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
-	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
-	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'com.h2database:h2'
-	runtimeOnly 'io.r2dbc:r2dbc-h2'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'io.projectreactor:reactor-test'
+	implementation 'com.github.slugify:slugify:3.0.3'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.0.4'
+	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc:3.0.4'
+	implementation 'org.springframework.boot:spring-boot-starter-hateoas:3.0.7'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux:3.0.4'
+	//implementation 'com.github.jmyday:slugifier:1.0'
+	compileOnly 'org.projectlombok:lombok:1.18.26'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools:3.0.4'
+	runtimeOnly 'com.h2database:h2:2.1.214'
+	runtimeOnly 'io.r2dbc:r2dbc-h2:1.0.0.RELEASE'
+	annotationProcessor 'org.projectlombok:lombok:1.18.26'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.0'
+	testImplementation 'io.projectreactor:reactor-test:3.5.4'
 }
 
 tasks.named('test') {
