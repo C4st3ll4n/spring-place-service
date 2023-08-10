@@ -3,6 +3,7 @@ package br.com.ph.placeservice.web;
 import br.com.ph.placeservice.api.PlaceRequest;
 import br.com.ph.placeservice.api.PlaceResponse;
 import br.com.ph.placeservice.domain.PlaceService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +20,7 @@ public class PlaceController {
     private PlaceService service;
 
     @PostMapping
-    public ResponseEntity<Mono<PlaceResponse>> create(@RequestBody PlaceRequest placeRequest){
+    public ResponseEntity<Mono<PlaceResponse>> create(@RequestBody @Valid PlaceRequest placeRequest){
         var createdPlace = service.create(placeRequest).map(PlaceMapper::fromPlaceToResponse);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdPlace);
     }
