@@ -17,7 +17,7 @@ public class PlaceService {
         var place = new Place(
                 null, placeRequest.name(),
                 slugify.slugify(placeRequest.name()), placeRequest.state(),
-                placeRequest.createdAt(), placeRequest.updatedAt()
+                null, null
         );
         return repository.save(place);
     }
