@@ -27,7 +27,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc:3.0.4'
 	implementation 'org.springframework.boot:spring-boot-starter-hateoas:3.0.7'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux:3.0.4'
-	//implementation 'com.github.jmyday:slugifier:1.0'
+	implementation 'org.springframework.boot:spring-boot-starter-validation:3.0.4'
 	compileOnly 'org.projectlombok:lombok:1.18.26'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools:3.0.4'
 	runtimeOnly 'com.h2database:h2:2.1.214'
